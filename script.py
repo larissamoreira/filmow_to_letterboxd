@@ -3,6 +3,7 @@
 #imports
 import requests
 from bs4 import BeautifulSoup
+import pandas
 
 #variables
 user = 'nnothumann' #change this user for yours.
@@ -26,16 +27,18 @@ def getOriginalTitle(links):
             moviesOriginals.append(link.get_text())
 
 def readAllMovies(user):
-    i = 1
-    while requests.get('https://filmow.com/usuario/%s/filmes/ja-vi/?pagina=%d' % (user, i)):
-        html_doc = requests.get('https://filmow.com/usuario/%s/filmes/ja-vi/?pagina=%d' % (user, i))
-        print("Lendo pagina %d\n" % i)
-        i = i + 1
-        soup = BeautifulSoup(html_doc.text, 'html.parser')
-        links = readLinks(soup)
-        getOriginalTitle(links)
+    i = 1 
+        while requests.get('https://filmow.com/usuario/%s/filmes/ja-vi/?pagina=%d' % (user, i)):
+            html_doc = requests.get('https://filmow.com/usuario/%s/filmes/ja-vi/?pagina=%d' % (user, i))
+            i = i + 5
+            soup = BeautifulSoup(html_doc.text, 'html.parser')
+            links = readLinks(soup)
+            getOriginalTitle(links)
 
 #call functions
 readAllMovies(user)
-print(moviesOriginals)
+
+# writing csv
+df = pandas.DataFrame(data={"Title": moviesOriginals})
+df.to_csv("./movies.csv", sep=',',index=False)
     
