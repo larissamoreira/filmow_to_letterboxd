@@ -7,7 +7,7 @@ from bs4 import BeautifulSoup
 #variables
 user = 'nnothumann' #change this user for yours.
 links = []
-moviesoriginals = []
+moviesOriginals = []
 
 #functions
 def readLinks(soup):
@@ -18,12 +18,12 @@ def readLinks(soup):
     return links
 
 def getOriginalTitle(links):
-    global moviesoriginals
+    global moviesOriginals
     for link in links:
         html_doc = requests.get('https://filmow.com%s' % link)
         soup = BeautifulSoup(html_doc.text, 'html.parser')
         for link in soup.find_all("h2", class_="movie-original-title"):
-            moviesoriginals.append(link.get_text())
+            moviesOriginals.append(link.get_text())
 
 def readAllMovies(user):
     i = 1
@@ -37,5 +37,5 @@ def readAllMovies(user):
 
 #call functions
 readAllMovies(user)
-print(moviesoriginals)
+print(moviesOriginals)
     
