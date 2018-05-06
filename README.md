@@ -17,7 +17,5 @@ In cmd:
 6. Run the script using `python3 <path-to-the-file>script.py`
     -  Change the path to where you download the file.
 
-Your csv will look like this:
-<script src="https://gist.github.com/larissamoreira/d1aef4ac6f05e89e6fcf1a3ecaa06dfd.js"></script>
-
-Finally you can import your movies to Letterboxd!
+Your csv was created, go check it!
+Finally you can import your movies to Letterboxd.
