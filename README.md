@@ -15,7 +15,7 @@ In cmd:
 5. Install BeautifulSoup using `pip install beautifulsoup4`
 
 6. Run the script using `python3 <path-to-the-file>script.py`
-    -  Change the <path-to-the-file> to where you downloaded the file.
+    -  Change the `path-to-the-file` to where you downloaded the file.
 
 Your csv was created, go check it!
 Finally you can import your movies to Letterboxd.
