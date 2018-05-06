@@ -2,6 +2,7 @@
 import requests
 from bs4 import BeautifulSoup
 import pandas
+import re
 
 #variables
 user = 'nnothumann' #change this user for yours.
@@ -21,16 +22,20 @@ def get_original_title(links):
     global movies_originals
     for link in links:
         html_doc = requests.get('https://filmow.com%s' % link)
+        print("getting original title from link %s" % link)
         soup = BeautifulSoup(html_doc.text, 'html.parser')
         for link in soup.find_all("h2", class_="movie-original-title"):
-            movies_originals.append(link.get_text())
-
+            if re.match("[^\x00-\x7F]", link.get_text()):
+                print("Invalid %s" % link.get_text())
+            else:
+                movies_originals.append(link.get_text())
+                
 def read_movies(user):
     i = 1 
     while requests.get('https://filmow.com/usuario/%s/filmes/ja-vi/?pagina=%d' % (user, i)):
         html_doc = requests.get('https://filmow.com/usuario/%s/filmes/ja-vi/?pagina=%d' % (user, i))
         print("reading page %d" % i)
-        i = i + 1
+        i = i + 5
         soup = BeautifulSoup(html_doc.text, 'html.parser')
         links = read_links(soup)
         get_original_title(links)
