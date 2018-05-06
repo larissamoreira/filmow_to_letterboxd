@@ -26,7 +26,10 @@ def get_original_title(links):
         soup = BeautifulSoup(html_doc.text, 'html.parser')
         for link in soup.find_all("h2", class_="movie-original-title"):
             if re.match("[^\x00-\x7F]", link.get_text()):
-                print("Invalid %s" % link.get_text())
+                for link in soup.find_all('div', class_="movie-other-titles"):
+                    for item in link.find_all('li'):
+                        if item.em.get_text() == "Estados Unidos da América":
+                            movies_originals.append(item.strong.get_text())
             else:
                 movies_originals.append(link.get_text())
                 
