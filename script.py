@@ -49,3 +49,4 @@ read_movies(user)
 # writing csv
 df = pandas.DataFrame(data={"Title": movies_originals})
 df.to_csv(csv_file, sep=',',index=False)
+
