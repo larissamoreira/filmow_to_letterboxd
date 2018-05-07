@@ -5,9 +5,8 @@ import pandas
 import re
 
 #variables
-user = 'nnothumann' #change this user for yours.
-csv_file = "./movies.csv"
 movies_originals = []
+csv_file = "./filmes.csv"
 
 #functions
 def read_links(soup):
@@ -43,10 +42,16 @@ def read_movies(user):
         links = read_links(soup)
         get_original_title(links)
 
-#call functions
+def get_info():
+    user = input("Digite o seu nome de usuário no filmow: ")
+    print("OK! A busca será feita no usuário " + user + ". Seu csv será salvo no diretório atual com o nome filmes.csv")
+    
+    return user
+
+# call functions
+user = get_info()
 read_movies(user)
 
 # writing csv
 df = pandas.DataFrame(data={"Title": movies_originals})
 df.to_csv(csv_file, sep=',',index=False)
-
