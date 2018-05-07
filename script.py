@@ -37,7 +37,7 @@ def read_movies(user):
     while requests.get('https://filmow.com/usuario/%s/filmes/ja-vi/?pagina=%d' % (user, i)):
         html_doc = requests.get('https://filmow.com/usuario/%s/filmes/ja-vi/?pagina=%d' % (user, i))
         print("reading page %d" % i)
-        i = i + 1
+        i = i + 10
         soup = BeautifulSoup(html_doc.text, 'html.parser')
         links = read_links(soup)
         get_original_title(links)
@@ -48,10 +48,14 @@ def get_info():
     
     return user
 
-# call functions
-user = get_info()
-read_movies(user)
+def main():
+    user = get_info()
+    read_movies(user)
+    #writing csv
+    df = pandas.DataFrame(data={"Title": movies_originals})
+    df.to_csv(csv_file, sep=',',index=False)
 
-# writing csv
-df = pandas.DataFrame(data={"Title": movies_originals})
-df.to_csv(csv_file, sep=',',index=False)
+if __name__ == "__main__":
+    main()
+
+

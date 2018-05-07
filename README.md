@@ -18,8 +18,9 @@ No cmd faça:
 
 6. Instale BeautifulSoup usando `pip install beautifulsoup4`
 
-7. Rode o script usando `python3 <caminho-para-o-arquivo>script.py`
-    -  Mude o `caminho-para-o-arquivo` para onde você fez o download do arquivo `script.py`
+7. Rode o script usando `python <caminho-para-o-arquivo>script.py` 
+    -  Mude o `caminho-para-o-arquivo` para onde você fez o download do arquivo `script.py`.
+    Exemplo: `C:\Users\Larissa\Desktop\filmowreader\script.py`
     
 8. Ao rodar o código, você terá que informar o seu nome de usuário no filmow, então é só esperar terminar a execução do código! 
     (Talvez demore um pouquinho! Quer dizer que você viu muitos filmes :D)
