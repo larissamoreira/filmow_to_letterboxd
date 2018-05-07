@@ -22,6 +22,6 @@ No cmd faça:
 7. Ao rodar o código, você terá que informar o seu nome de usuário no filmow, então é só esperar terminar a execução do código! 
     (Talvez demore um pouquinho! Quer dizer que você viu muitos filmes :D)
 
-8. Quando terminar será gerado o arquivo `./filmes.csv`, que é o mesmo diretório do `script.py`.
+8. Quando terminar será gerado o arquivo `./filmes.csv`, que é o seu diretório atual.
 
 9. Agora é só importar o seu csv no https://letterboxd.com/. Para isso vá em Settings > IMPORT & EXPORT > IMPORT YOUR DATA
