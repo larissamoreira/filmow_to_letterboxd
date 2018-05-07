@@ -12,16 +12,18 @@
 
 No cmd faça:
 
-4. Instale Pandas usando `pip install pandas`
+4. Instale Requests usando `pip install requests`
 
-5. Instale BeautifulSoup usando `pip install beautifulsoup4`
+5. Instale Pandas usando `pip install pandas`
 
-6. Rode o script usando `python3 <caminho-para-o-arquivo>script.py`
+6. Instale BeautifulSoup usando `pip install beautifulsoup4`
+
+7. Rode o script usando `python3 <caminho-para-o-arquivo>script.py`
     -  Mude o `caminho-para-o-arquivo` para onde você fez o download do arquivo `script.py`
     
-7. Ao rodar o código, você terá que informar o seu nome de usuário no filmow, então é só esperar terminar a execução do código! 
+8. Ao rodar o código, você terá que informar o seu nome de usuário no filmow, então é só esperar terminar a execução do código! 
     (Talvez demore um pouquinho! Quer dizer que você viu muitos filmes :D)
 
-8. Quando terminar será gerado o arquivo `./filmes.csv`, que é o seu diretório atual.
+9. Quando terminar será gerado o arquivo `./filmes.csv`, que é o seu diretório atual.
 
-9. Agora é só importar o seu csv no https://letterboxd.com/. Para isso vá em Settings > IMPORT & EXPORT > IMPORT YOUR DATA
+10. Agora é só importar o seu csv no https://letterboxd.com/. Para isso vá em Settings > IMPORT & EXPORT > IMPORT YOUR DATA
