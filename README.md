@@ -1,21 +1,27 @@
-# Filmow Reader
+# Filmow to Letterboxd
 
-1. Download the code in "Clone or download" > Download ZIP
+## Gera um csv compatível com o import do Letterboxd com os filmes marcados como já vistos na conta do Filmow do usuário informado.
 
-2. Install Python 3 (Make sure "Add Python 3.6 to PATH" box is selected)
+1. Faça download do código em Clone or download > Download ZIP
+
+2. Instale Python 3 (A opção "Add Python 3.6 to PATH" deve ficar selecionada)
     - https://www.python.org/downloads/
 
-3. Open terminal
-    - Win+R > type cmd > OK
+3. Abra o Prompt de Comando
+    - Win+R > digite cmd > OK
 
-In cmd:
+No cmd faça:
 
-4. Install Pandas using `pip install pandas`
+4. Instale Pandas usando `pip install pandas`
 
-5. Install BeautifulSoup using `pip install beautifulsoup4`
+5. Instale BeautifulSoup usando `pip install beautifulsoup4`
 
-6. Run the script using `python3 <path-to-the-file>script.py`
-    -  Change the `path-to-the-file` to where you downloaded the file.
+6. Rode o script usando `python3 <caminho-para-o-arquivo>script.py`
+    -  Mude o `caminho-para-o-arquivo` para onde você fez o download do arquivo `script.py`
+    
+7. Ao rodar o código, você terá que informar o seu nome de usuário no filmow, então é só esperar terminar a execução do código! 
+    (Talvez demore um pouquinho! Quer dizer que você viu muitos filmes :D)
 
-Your csv was created, go check it!
-Finally you can import your movies to Letterboxd.
+8. Quando terminar será gerado o arquivo `./filmes.csv`, que é o mesmo diretório do `script.py`.
+
+9. Agora é só importar o seu csv no https://letterboxd.com/. Para isso vá em Settings > IMPORT & EXPORT > IMPORT YOUR DATA
