@@ -37,7 +37,7 @@ def read_movies(user):
     while requests.get('https://filmow.com/usuario/%s/filmes/ja-vi/?pagina=%d' % (user, i)):
         html_doc = requests.get('https://filmow.com/usuario/%s/filmes/ja-vi/?pagina=%d' % (user, i))
         print("reading page %d" % i)
-        i = i + 10
+        i = i + 1
         soup = BeautifulSoup(html_doc.text, 'html.parser')
         links = read_links(soup)
         get_original_title(links)
@@ -57,5 +57,3 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-
