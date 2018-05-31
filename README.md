@@ -2,8 +2,9 @@
 
 ## Gera um csv compatível com o import do Letterboxd com os filmes marcados como já vistos na conta do Filmow do usuário informado.
 
+### (Instruções para windows)
 
-1. Faça download do código em Clone or download > Download ZIP. Ou clone o projeto com:
+1. Crie uma pasta para colocar o código, faça download do projeto em "Clone or download > Download ZIP", o coloque nessa pasta e extraia o arquivo. Ou clone o projeto com:
 ```
 git clone https://github.com/larissamoreira/filmow_to_letterboxd.git
 ```
@@ -14,7 +15,7 @@ git clone https://github.com/larissamoreira/filmow_to_letterboxd.git
 3. Abra o Prompt de Comando
     - Win+R > digite cmd > OK
 
-Agora é necessário instalar as dependências para o código funcionar, para isso, antes disso, vamos criar um ambiente virtual, para que tudo ocorra dentro dele:
+No terminal, entre na pasta onde está o projeto, com `cd <caminho-para-pasta>`. Agora é necessário instalar as dependências para o código funcionar, crie um ambiente virtual para que tudo ocorra dentro dele:
 
 ```
 python -m venv ambiente
@@ -29,9 +30,14 @@ Por fim, instale as dependências:
 pip install -r requirements.txt
 ```
 
-4. Rode o script usando `python <caminho-para-o-arquivo>script.py` 
-    -  Mude o `caminho-para-o-arquivo` para onde você fez o download do arquivo `script.py`.
-    Exemplo: `C:\Users\Larissa\Desktop\filmowreader\script.py`
+4. Hora de rodar o código, para isso entre na pasta do projeto com
+```
+cd filmow_to_letterboxd-master
+```
+e faça: 
+```
+python script.py
+```
     
 5. Ao rodar o código, você terá que informar o seu nome de usuário no filmow, então é só esperar terminar a execução do código! 
     (Talvez demore um pouquinho! Quer dizer que você viu muitos filmes :D)
